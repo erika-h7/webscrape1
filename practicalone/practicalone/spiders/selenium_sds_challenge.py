@@ -17,6 +17,7 @@ import pandas as pd
 
 # setting our instance
 driver = webdriver.Chrome()
+
 time.sleep(2)
 
 # website
@@ -68,7 +69,7 @@ driver.quit()
 df_scrape_one_clean = df.replace('\n', ' ', )
 df_scrape_two_clean = df_two.replace('\n', ' ', )
 df_scrape_three_clean = df_three.replace('\n', ' ', )
-clean_stack = pd.contact([df_scrape_one_clean, df_scrape_two_clean, df_scrape_three_clean], axis=1)
+clean_stack = pd.concat([df_scrape_one_clean, df_scrape_two_clean, df_scrape_three_clean], axis=1)
 
 
 
